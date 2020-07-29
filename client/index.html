@@ -1,0 +1,74 @@
+<!Doctype html>
+
+<title> ESCAPE THE BLACKHOLE </title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"> </script>
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+    <div class = "container-fluid">
+
+        <div class = "row">
+
+
+            <div class = "col-md-3">
+                <form class="text-center border border-dark p-5" id = "credentialsForm" style = "height : 500px;">
+
+                    <p class="h4 mb-4">Join/Create Room</p>
+                
+                    <input type="text" id="usernameInput" class="form-control mb-4" placeholder="@username">
+                    <input type="text" id="roomnameInput" class="form-control mb-4" placeholder="Room Name">
+                    <button class="btn btn-info btn-block my-4" type="submit">Submit</button>    
+
+                </form>
+                <div id = "onlineUsers" style = "height : 300; overflow-y : scroll;" class = "text-center border border-dark p-5">
+                    <p class = "h4 mb-4"> Online Users </p>
+                    <ul class = "list-unstyled" id = "onlineUsersList"></ul>
+                </div>
+                <div id = "chatbox" class = "text-center border border-dark p-1">
+                    <h2> Chat Room </h2>  
+                    <ul class = "list-group" id = "chatMessages"  style = "max-height:300px; overflow-y:scroll"> </ul>
+                    <form class="text-center" id = "chatboxForm">
+                        <!-- <input class = "border border-dark" type="text" id="chatInput" placeholder="Message">
+                        <button class="btn border border-dark" id = "chatSubmit"> Say </button>  -->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" id="chatSubmit">Say</button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Your Message" id = "chatInput" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        </div>
+                    </form>
+                </div>
+
+                    <!-- Default form login -->
+            </div>
+
+            <div class = "col-md-9" id = "game">
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src = "/socket.io/socket.io.js"> </script>    
+    <script src = "Phaser.js"> </script>
+    <script src = "client.js"> </script>
+</body>
